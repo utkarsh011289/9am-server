@@ -54,4 +54,13 @@ router.get('/get-std',async function(req,res,next){
             }
                             
       })
+
+      router.post( "/login" , function(req,res,next){
+        const { uid, pwd }  = req.body
+        if( uid==="nit" && pwd==="nitnit" ){
+                     res.send( [{uid,pwd}])
+        }else{
+                     res.send([])
+        }
+      })
 module.exports = router ;
